@@ -359,6 +359,8 @@ def main_d():
         r = convergence_rates(e,e_1,dt,dt/2)
         print 'The convergence rate is:', r
 
+# TO GET THE OUTPUT FOR TASK a), b), c) and d)
+# CALL THE "main_a()" for a), etc.
 if __name__ == '__main__':
      main_a()
      #main_b()
