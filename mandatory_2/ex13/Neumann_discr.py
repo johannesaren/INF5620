@@ -32,7 +32,7 @@ def solver(I,V,f,q,U_0,U_L,L,dt,C,T,
     C2 = (dt/dx)**2
     dt2 = dt*dt
 
-    # Wraps user-given f, I, V, U_0, U_L if None or 0
+    # WRAPS THE INPUT "f, I, V, U_0, U_L" if None or 0
     if f is None or f == 0:
         f = (lambda x, t: 0) if version == 'scalar' else \
             lambda x, t: zeros(x.shape)
@@ -106,7 +106,7 @@ def solver(I,V,f,q,U_0,U_L,L,dt,C,T,
         # x=L: i+1 -> i-1 since u[i+1]=u[i-1] when du/dn=0
 
         #-------------------------------------------------
-        # THIS IS IF-test SETS THE DIFFERENT CONDITIONS FOR
+        # THIS IF-test SETS THE DIFFERENT CONDITIONS FOR
         # "Exercise 13 a)", "Exercise 13 b)", etc.
         if task == 'task_a':
             # INSERTING BOUNDARY CONDITIONS for x=START
